@@ -10,6 +10,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Diego Alexander Ramos | Analista de Sistemas & Desarrollador Fullstack",
+  verification: {
+    google: "XOswORhhSydnnVtJ6fmae0OTOM09VdMwS-arhO88sS0",
+  },
   description:
     "Portafolio profesional de Diego Alexander Ramos, experto en Java (Spring Boot), Angular y arquitecturas de microservicios. Especialista en soluciones Fintech y gestión social.",
   keywords: [
