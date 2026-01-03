@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Diego Alexander Ramos" }],
   openGraph: {
+    siteName: "Diego Ramos Portafolio",
     title: "Diego Alexander Ramos | Analista de Sistemas & Desarrollador Fullstack",
     description:
       "Explora los proyectos y experiencia profesional de Diego Alexander Ramos en desarrollo de software moderno.",
@@ -43,6 +44,12 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  applicationName: "Diego Ramos Portafolio",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.jpg",
   },
 }
 
