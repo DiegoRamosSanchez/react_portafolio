@@ -27,12 +27,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Diego Alexander Ramos" }],
   openGraph: {
-    siteName: "Diego Ramos Portafolio",
+    siteName: "Diego Alexander Ramos Portfolio",
     title: "Diego Alexander Ramos | Analista de Sistemas & Desarrollador Fullstack",
     description:
       "Explora los proyectos y experiencia profesional de Diego Alexander Ramos en desarrollo de software moderno.",
     type: "website",
     locale: "es_PE",
+    url: "https://dars-portafolio.vercel.app",
   },
   robots: {
     index: true,
@@ -45,16 +46,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  applicationName: "Diego Ramos Portafolio",
+  applicationName: "Diego Alexander Ramos Portfolio",
   icons: {
-    icon: [
-      { url: "/apple-touch-icon.jpg", sizes: "any" },
-      { url: "/apple-touch-icon.jpg", sizes: "16x16", type: "image/jpeg" },
-      { url: "/apple-touch-icon.jpg", sizes: "32x32", type: "image/jpeg" },
-    ],
-    shortcut: "/apple-touch-icon.jpg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.jpg",
   },
+  // Añade esto para controlar mejor cómo se ve en búsquedas
+  metadataBase: new URL("https://dars-portafolio.vercel.app"),
 }
 
 export default function RootLayout({
@@ -64,6 +63,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.jpg" />
+      </head>
       <body className={`font-sans antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
