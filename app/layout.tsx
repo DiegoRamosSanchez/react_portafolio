@@ -47,8 +47,12 @@ export const metadata: Metadata = {
   },
   applicationName: "Diego Ramos Portafolio",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: [
+      { url: "/apple-touch-icon.jpg", sizes: "any" },
+      { url: "/apple-touch-icon.jpg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/apple-touch-icon.jpg", sizes: "32x32", type: "image/jpeg" },
+    ],
+    shortcut: "/apple-touch-icon.jpg",
     apple: "/apple-touch-icon.jpg",
   },
 }
