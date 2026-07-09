@@ -1,0 +1,412 @@
+.experience {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.experience__container {
+  width: 100%;
+}
+
+.experience__subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ===== TIMELINE ===== */
+.experience__timeline {
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Línea vertical */
+.experience__line-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.experience__line {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  border-radius: 999px;
+  transition: height 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== ITEMS ===== */
+.experience__item {
+  position: relative;
+  margin-bottom: 5rem;
+  padding: 0 1rem;
+}
+
+.experience__item:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== CARD WRAPPER ===== */
+.experience__card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.experience__item--left .experience__card-wrapper {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.experience__item--left .experience__card-wrapper .experience__image-wrapper {
+  order: 2;
+}
+
+.experience__item--left .experience__card-wrapper .experience__card {
+  order: 1;
+}
+
+/* ===== IMAGEN ===== */
+.experience__image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.experience__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.experience__image-wrapper:hover .experience__image {
+  transform: scale(1.05);
+}
+
+/* ===== DOT ===== */
+.experience__dot-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 3px solid var(--bg-primary);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.experience__dot--current {
+  background: var(--accent);
+  box-shadow: 0 0 20px rgba(233, 196, 106, 0.4);
+}
+
+.experience__dot-pulse {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* ===== CARD ===== */
+.experience__card {
+  position: relative;
+}
+
+.experience__card-inner {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience__card-inner--active {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(233, 196, 106, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Badge actual */
+.experience__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(233, 196, 106, 0.12);
+  border: 1px solid rgba(233, 196, 106, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.experience__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Periodo */
+.experience__period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.experience__period-icon {
+  font-size: 0.8rem;
+}
+
+/* Título */
+.experience__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+/* Empresa */
+.experience__company {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.experience__company-name {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.experience__company-sep {
+  color: var(--border);
+}
+
+.experience__location {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Descripción */
+.experience__description {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Skills */
+.experience__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience__skill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: var(--bg-surface-hover);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.experience__card-inner--active .experience__skill {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .experience__card-wrapper {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 3rem 1.5rem;
+  }
+
+  .experience__subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience__line-wrapper {
+    left: 20px;
+  }
+
+  .experience__item {
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .experience__card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .experience__item--left .experience__card-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .experience__item--left .experience__card-wrapper .experience__image-wrapper {
+    order: 1;
+  }
+
+  .experience__item--left .experience__card-wrapper .experience__card {
+    order: 2;
+  }
+
+  .experience__image-wrapper {
+    aspect-ratio: 16/9;
+    max-height: 200px;
+  }
+
+  .experience__dot-wrapper {
+    left: 20px;
+    top: 2rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .experience__dot {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+  }
+
+  .experience__dot-pulse {
+    width: 14px;
+    height: 14px;
+  }
+
+  .experience__card-inner {
+    padding: 1.25rem;
+  }
+
+  .experience__title {
+    font-size: 1.1rem;
+  }
+
+  .experience__description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 2rem 1rem;
+  }
+
+  .experience__item {
+    padding-left: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .experience__line-wrapper {
+    left: 16px;
+  }
+
+  .experience__dot-wrapper {
+    left: 16px;
+  }
+
+  .experience__card-inner {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .experience__image-wrapper {
+    max-height: 160px;
+  }
+
+  .experience__title {
+    font-size: 1rem;
+  }
+
+  .experience__company-name {
+    font-size: 0.8rem;
+  }
+
+  .experience__skill {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .experience__period {
+    font-size: 0.65rem;
+  }
+
+  .experience__badge {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

@@ -1,0 +1,88 @@
+export const certifications = [
+  {
+    id: 1,
+    title: "Nombre del Certificado",
+    institution: "Nombre de la Institución",
+    date: "2024",
+    description: "Descripción breve del curso o certificado obtenido y los conocimientos adquiridos.",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
+    tags: ["Tecnología 1", "Tecnología 2"],
+    credentialUrl: "#",
+    type: "certificado",
+  },
+  {
+    id: 2,
+    title: "Diploma de Honor",
+    institution: "Universidad / Instituto",
+    date: "2023",
+    description: "Diploma otorgado por rendimiento académico sobresaliente durante el periodo de estudios.",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80",
+    tags: ["Rendimiento", "Académico"],
+    credentialUrl: "#",
+    type: "diploma",
+  },
+  {
+    id: 3,
+    title: "Curso de Especialización",
+    institution: "Plataforma / Centro educativo",
+    date: "2023",
+    description: "Curso de especialización completado exitosamente con evaluación final aprobada.",
+    image: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&q=80",
+    tags: ["Especialización", "Práctica"],
+    credentialUrl: "#",
+    type: "curso",
+  },
+  {
+    id: 4,
+    title: "Certificación Profesional",
+    institution: "Institución Certificadora",
+    date: "2024",
+    description: "Certificación de nivel profesional que valida competencias técnicas en el área.",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
+    tags: ["Profesional", "Técnico"],
+    credentialUrl: "#",
+    type: "certificado",
+  },
+  {
+    id: 5,
+    title: "Diploma de Excelencia",
+    institution: "Centro Académico",
+    date: "2022",
+    description: "Reconocimiento por desempeño sobresaliente y excelencia académica.",
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80",
+    tags: ["Excelencia", "Premio"],
+    credentialUrl: "#",
+    type: "diploma",
+  },
+  {
+    id: 6,
+    title: "Curso Avanzado",
+    institution: "Plataforma Online",
+    date: "2022",
+    description: "Formación avanzada con proyecto final evaluado por expertos de la industria.",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80",
+    tags: ["Avanzado", "Proyecto"],
+    credentialUrl: "#",
+    type: "curso",
+  },
+];
+
+export const typeConfig = {
+  curso: {
+    label: "Curso",
+    icon: "🎓",
+    accentColor: "#3B82F6",
+  },
+  diploma: {
+    label: "Diploma",
+    icon: "🏆",
+    accentColor: "#F59E0B",
+  },
+  certificado: {
+    label: "Certificado",
+    icon: "✅",
+    accentColor: "#22C55E",
+  },
+};
+
+export const filters = ["Todos", "curso", "diploma", "certificado"];

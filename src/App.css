@@ -1,0 +1,15 @@
+.app-main {
+  padding-top: 64px;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    padding-top: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-main {
+    padding-top: 48px;
+  }
+}
