@@ -34,8 +34,10 @@ function Contact() {
     s = s.replace(/on\w+\s*=\s*["'][^"']*["']/gi, "");
     s = s.replace(/(javascript|data|vbscript):/gi, "");
     s = s.replace(/&[#\w]+;/g, "");
+    // Eliminar caracteres de control excepto espacios (0x20) y saltos de línea
     s = s.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, "");
-    return s.slice(0, 5000).trim();
+    // No usar trim() para mantener espacios entre palabras
+    return s.slice(0, 5000);
   };
 
   const hasMalicious = (v) =>
@@ -57,9 +59,9 @@ function Contact() {
 
   const validate = () => {
     const e = {};
-    if (formData.name.length < 2) e.name = "Mínimo 2 caracteres";
+    if (formData.name.trim().length < 2) e.name = "Mínimo 2 caracteres";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) e.email = "Email inválido";
-    if (formData.message.length < 10) e.message = "Mínimo 10 caracteres";
+    if (formData.message.trim().length < 10) e.message = "Mínimo 10 caracteres";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -73,10 +75,10 @@ function Contact() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: sanitizePlainText(formData.name),
-          email: sanitizePlainText(formData.email),
-          subject: sanitizePlainText(formData.subject),
-          message: sanitizePlainText(formData.message),
+          name: sanitizePlainText(formData.name).trim(),
+          email: sanitizePlainText(formData.email).trim(),
+          subject: sanitizePlainText(formData.subject).trim(),
+          message: sanitizePlainText(formData.message).trim(),
         }),
       });
       if (res.ok) {
