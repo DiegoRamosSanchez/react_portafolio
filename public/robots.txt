@@ -1,0 +1,10 @@
+# Roboto.txt para el portafolio de Diego Alexander Ramos
+User-agent: *
+Allow: /
+Disallow: /project/
+
+# Sitemap
+Sitemap: https://darsys.pages.dev/sitemap.xml
+
+# Host
+Host: https://darsys.pages.dev
