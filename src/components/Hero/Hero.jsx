@@ -24,7 +24,7 @@ function Hero() {
           {/* Título - H1 principal con tu nombre completo */}
           <h1 className="hero__title">
             <span className="hero__title-name">Diego Alexander</span>
-            <span className="hero__title-name hero__title-name--light">
+            <span className="hero__title-name">
               Ramos
             </span>
           </h1>
