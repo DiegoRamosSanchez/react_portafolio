@@ -16,7 +16,7 @@ export const certifications = [
     institution: "Universidad / Instituto",
     date: "2023",
     description: "Diploma otorgado por rendimiento académico sobresaliente durante el periodo de estudios.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80",
+    image: "https://ix-marketing.imgix.net/2024-06_blog_the-power-of-images_image-4_drive-engagement.jpg?ixembed=1717710892533&auto=format,compress?w=600&q=80",
     tags: ["Rendimiento", "Académico"],
     credentialUrl: "#",
     type: "diploma",
