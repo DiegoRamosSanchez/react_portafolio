@@ -28,6 +28,8 @@ export const socialLinks = [
 export const specialties = [
   "Java 17",
   "Spring",
+  "PHP",
+  "laravel",
   "Angular",
   "Blockchain",
   "Docker",
