@@ -75,11 +75,11 @@ export const aboutData = {
   eyebrow: "// sobre mí",
   title: "Desarrollador Software",
   paragraphs: [
-    "Soy <strong>Diego Alexander Ramos Sanchez</strong>, Analista de Sistemas e Desarrollador de Software titulado con más de 3 años de experiencia en el desarrollo de software y optimización de procesos empresariales. Especializado en <strong>arquitecturas distribuidas</strong>, microservicios reactivos y gestión avanzada de bases de datos.",
+    "Soy <strong>Diego Alexander Ramos Sánchez</strong>, Analista de Sistemas y Desarrollador de Software titulado, con más de 3 años de experiencia diseñando soluciones que optimizan procesos empresariales. Me especializo en <strong>arquitecturas distribuidas</strong>, microservicios reactivos y gestión avanzada de bases de datos.",
 
-    "Mi enfoque combina la solidez técnica con la comprensión del negocio. He construido desde <strong>billeteras digitales con Blockchain</strong> hasta sistemas de gestión social, siempre aplicando testing riguroso, CI/CD y principios de diseño que priorizan la escalabilidad y el mantenimiento.",
+    "Mi forma de trabajar combina solidez técnica con visión de negocio. He construido desde <strong>billeteras digitales con Blockchain</strong> hasta sistemas de gestión social, aplicando siempre testing riguroso, CI/CD y principios de diseño enfocados en escalabilidad y mantenibilidad.",
 
-    "<strong>Diego Alexander Ramos</strong> valora el clean code tanto como el impacto que genera en equipos y usuarios finales. Me apasiona transformar requerimientos complejos en soluciones elegantes y sostenibles, trabajando siempre con estándares de calidad que aseguran el éxito de cada proyecto."
+    "Para mí, el clean code es tan importante como el impacto que genera en los equipos y en los usuarios finales. Disfruto transformar requerimientos complejos en soluciones elegantes y sostenibles, manteniendo siempre estándares de calidad que garanticen el éxito de cada proyecto."
   ],
   stats: [
     { number: "3+", label: "años de experiencia" },
